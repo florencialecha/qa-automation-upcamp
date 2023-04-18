@@ -1,0 +1,23 @@
+Test addToCart By Katalon: Malas prácticas y posible solución
+- Tiene importaciones sin usar =>
+    Eliminar importaciones en desuso:
+        import java.util.regex.Pattern;
+        import java.util.concurrent.TimeUnit;
+        import org.openqa.selenium.support.ui.Select;
+        import java.io.File;
+        import org.apache.commons.io.FileUtils;
+- Tiene código duplicado =>
+    Crear variables para los elementos, almacenarlas y reutilizarlas:
+        - Elemento currency de la página:
+        - Elemento de precio de producto:
+        - Elemento de botón de agregar al carrito:
+        - Elemento quantity de producto agregado al carrito:
+- Selectores poco específicos => Mejorar los selectores para que sean más específicos:
+  - Selector currency de la página: #top .btn-group
+  - Selector de precio de producto: #content .row .col-sm-4 h2
+  - Selector quantity de producto agregado al carrito: .table-responsive input.form-control [value]
+ - Se le puede agregar un elemento para que espere a que se cargue la página antes de ejecutar el seleccionar producto y el ver carrito
+
+ Se adjunta imagen donde se ven que los selectores propuestos permiten ejecutar los test correctamente.
+
+
