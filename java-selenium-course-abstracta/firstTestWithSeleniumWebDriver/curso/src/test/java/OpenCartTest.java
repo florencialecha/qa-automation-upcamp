@@ -40,9 +40,10 @@ public class OpenCartTest {
         driver.findElement(By.name("USD")).click(); // seleccionar la moneda USD
         driver.findElement(By.xpath("//img[@alt='iPhone']")).click(); // click en un producto
         assertEquals(driver.findElement(By.cssSelector("#content .row .col-sm-4 h2")).getText(), "$123.20"); // verificar el precio del producto
-        driver.findElement(By.cssSelector("#top .fa-shopping-cart")).click();
+        driver.findElement(By.cssSelector("#button-cart")).click(); // click en el boton de agregar al carrito
+        driver.findElement(By.cssSelector("#top .fa-shopping-cart")).click(); // click en el boton de carrito
         driver.findElement(By.cssSelector(".table-responsive input.form-control")).click();
-        assertEquals(driver.findElement(By.cssSelector(".table-responsive input.form-control [value]")).getAttribute("value"), "1");
+        assertEquals(driver.findElement(By.cssSelector(".table-responsive input.form-control")).getAttribute("value"), "1");
     }
 
     @AfterClass(alwaysRun = true)
