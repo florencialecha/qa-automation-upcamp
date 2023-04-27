@@ -1,0 +1,6 @@
+scripts\AddToCartTest.class
+pages\ProductPage.class
+pages\ProductSearchPage.class
+dataProviders\ProductsData.class
+pages\CartPage.class
+pages\HomePage.class
