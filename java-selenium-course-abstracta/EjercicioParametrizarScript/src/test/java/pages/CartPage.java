@@ -40,7 +40,7 @@ public class CartPage {
     }
 
     public void waitForCartToLoad() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         wait.until(ExpectedConditions.visibilityOf(content));
         wait.until(ExpectedConditions.visibilityOf(tableCartItems));
     }

@@ -1,15 +1,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test Suite">
+
     <test name="Health Check Test">
         <classes>
             <class name="tests.HealthCheckTest" />
         </classes>
     </test>
 
-    <test name="Add To Cart Test">
+    <test name="AddToCartTest1">
         <parameter name="productName" value="MacBook" />
         <parameter name="productPrice" value="$602.00" />
         <parameter name="productCurrency" value="USD" />
+        <classes>
+            <class name="tests.AddToCartTest" />
+        </classes>
+    </test>
+
+    <test name="AddToCartTest2">
         <parameter name="productName" value="iPhone" />
         <parameter name="productPrice" value="96.66€" />
         <parameter name="productCurrency" value="EUR" />
@@ -17,4 +24,5 @@
             <class name="tests.AddToCartTest" />
         </classes>
     </test>
+
 </suite>

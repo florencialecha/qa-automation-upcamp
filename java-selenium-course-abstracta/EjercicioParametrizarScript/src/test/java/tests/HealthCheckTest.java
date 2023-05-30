@@ -33,9 +33,8 @@ public class HealthCheckTest {
     }
 
     @AfterMethod
-    @Description("Close the current session of web driver")
     public void tearDown() {
-        driver.close();
+        driver.quit();
     }
 
 }
